@@ -12,7 +12,7 @@ const LogOutBtn = () => {
     )
    }
   return (
-    <Button className = ' p-1 rounded-sm transition-all duration-200 bg-gray-400 hover:bg-gray-300' onClick ={LogOutHandler}>
+    <Button className = ' inline-block px-5 py-2 rounded-sm bg-gray-200 duration-200 hover:bg-gray-100 ' onClick ={LogOutHandler}>
         Logout
     </Button>
   )
