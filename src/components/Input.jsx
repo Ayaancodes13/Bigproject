@@ -9,7 +9,7 @@ const  Input  =  React.forwardRef (function Input({
     const id = useId()
     return(
         <div>
-            {label && ( <label htmlFor="id">{label}</label>)}
+            {label && ( <label htmlFor={id}>{label}</label>)}
             <input type={`${type}`}
             className={`outline-none rounded-sm px-3 py-2 focus:bg-gray-50 duration-200 ${className}`}
             ref={ref}
