@@ -30,14 +30,14 @@ const Login = () => {
         }
     }
   return(
-    <div className='flex items-center justify-center h-[60%] sm:w-[90%] md:[30%]'>
+    <div className='flex items-center justify-center h-[60%] sm:w-[90%] md:[w-30%]'>
         <div className='h-full w-full flex items-center justify-center flex-col'>
             <span className='inline-block h-[90px]'><img className='h-full w-full' src={Logo} alt="Logo" /></span>
                 <form onSubmit={handleSubmit(userLogin)} className='flex items-center justify-center flex-wrap h-[70%] w-[100%]'>
             <div className='w-[100%] h-[30%]'>
 
             <Input
-            className="w-full"
+            className="h-[70%] w-[70%]"
             label= "Email: "
             placeholder="Enter your Email"
             type = "email"
@@ -55,6 +55,7 @@ const Login = () => {
                 label = "Password"
                 placeholder="Enter your Password"
                 type="password"
+                className="h-[60%] w-[60%]"
                 {
                     ...register(
                         "password",{
@@ -65,6 +66,9 @@ const Login = () => {
                 }
                 />
             </div>
+                {error && (
+                    <p>{error}</p>
+                )}
             <div className='w-[100%] h-[30%] flex items-center justify-around '>
                 <Button
                 type='submit'
@@ -76,9 +80,6 @@ const Login = () => {
                 </Button>
                 
             </div>
-                {error && (
-                    <p>{error}</p>
-                )}
              
                      </form>
         </div>
